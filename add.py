@@ -1,0 +1,15 @@
+from tkinter import *
+root=Tk()
+def getvar():
+    print(f"the addition of given number is:{n1.get()+n2.get()}")
+    ans.set(n1.get()+n2.get())
+root.title("cal")
+root.geometry("555x570")
+n1=IntVar()
+n2=IntVar()
+Entry(root,textvariable=n1).pack()
+Entry(root,textvariable=n2).pack()
+Button(text="submit", command=getvar).pack()
+ans = StringVar()
+Entry(root,textvariable=ans).pack()
+root.mainloop()

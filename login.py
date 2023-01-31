@@ -1,0 +1,18 @@
+from tkinter import *
+def getvar():
+    print("username:", uservalue.get())
+    print("password:", passvalue.get())
+root=Tk()
+root.geometry("560x540")
+username=Label(root,text="username")
+password=Label(root,text="password")
+username.grid(row=0)
+password.grid(row=1)
+uservalue=StringVar()
+passvalue=StringVar()
+userentry=Entry(root, textvariable=uservalue)
+passentry=Entry(root, textvariable=passvalue)
+userentry.grid(row=0, column=1)
+passentry.grid(row=1, column=1)
+Button(text="submit", command=getvar).grid()
+root.mainloop()

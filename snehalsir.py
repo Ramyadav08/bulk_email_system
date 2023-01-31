@@ -1,0 +1,20 @@
+from tkinter import *
+root=Tk()
+root.geometry("660x590+300+90")
+root.resizable(False,False)
+root.config(bg="white")
+title = Label(root, font=("arial", 22,"bold"), text="Bulk email send ", bg="#222A35")
+title.place(x=0, y=0, relwidth=1)
+subject=Label(root,text="SUBJECT",font=("arial",22),bg="white",fg="black")
+subject.place(x=275,y=40)
+msg = Label(root, font=("arial", 22), text="MESSAGE", fg="black")
+msg.place(x=275, y=140)
+
+subject_entery= Entry(root, font=("arial", 15), fg="black", bg="lightyellow")
+subject_entery.place(x=100, y=100, width=500, height=30)
+message = Text(root, font=("arial", 16), fg="black", bg="lightyellow")
+message.place(x=100, y=190, width=500, height=300)
+
+btn_send=Button(root,text="SEND",font=('arial',16,"bold"),bg="green",fg="black",activebackground="green",cursor="hand2")
+btn_send.place(x=295,y=500)
+root.mainloop()
